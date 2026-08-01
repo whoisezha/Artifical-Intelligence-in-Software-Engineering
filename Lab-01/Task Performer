@@ -1,0 +1,61 @@
+# Online Python compiler (interpreter) to run Python online.
+# TASK 1: INTRODUCTION
+# This program is a Student Grade Calculator that takes a
+# student's marks and calculates their grade.
+# TASK 2 & 3: TERMINAL / PYTHON INTERPRETER
+# (This program runs by typing "python filename.py" in the terminal)
+# TASK 4: VARIABLES
+student_name = ""
+total_marks = 0
+subjects_count = 0
+
+# TASK 5: OPERATORS
+# arithmetic (+, -, *, /), comparison (>=, <), logical (and, or)
+
+# TASK 6: DICTIONARY USAGE
+grade_scale = {
+    "A": 90,
+    "B": 80,
+    "C": 70,
+    "D": 60,
+    "F": 0
+}
+
+# TASK 7: LISTS AND TUPLES
+subjects = ["Math", "Physics", "AI", "Programming"]   # list
+subject_range = (0, len(subjects))                    # tuple
+
+# TASK 9: THE FOR LOOP + TASK 10: USER INPUT
+marks_list = []
+print("=== Student Grade Calculator ===")
+student_name = input("Enter student name: ")
+
+for subject in subjects:
+    marks = float(input(f"Enter marks for {subject} (out of 100): "))
+    marks_list.append(marks)
+
+total_marks = sum(marks_list)
+average = total_marks / len(marks_list)
+
+# TASK 8: CONDITIONAL STATEMENTS
+if average >= 90:
+    grade = "A"
+elif average >= 80:
+    grade = "B"
+elif average >= 70:
+    grade = "C"
+elif average >= 60:
+    grade = "D"
+else:
+    grade = "F"
+
+# TASK 10: WHILE LOOP (extra feature - retry option)
+retry = "yes"
+while retry.lower() == "yes":
+    print(f"\nStudent: {student_name}")
+    print(f"Total Marks: {total_marks}")
+    print(f"Average: {average:.2f}")
+    print(f"Grade: {grade}")
+    retry = input("\nDo you want to see result again? (yes/no): ")
+
+print("\nProgram Ended. Thank you!")
