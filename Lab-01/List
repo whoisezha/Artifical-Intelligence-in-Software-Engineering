@@ -1,0 +1,22 @@
+# Online Python compiler (interpreter) to run Python online.
+print(dir(list))
+help(list.reverse)
+lst=['a','b','c']
+lst.reverse()
+print("n\Reverse List : " , lst) 
+lst2=['a','b','c']
+lst2.append('d')
+print("n\"After Append :  " , lst2)
+lst2.remove('b')
+print("n\After Remove : " , lst2)
+print("n\Count Of a  :  " ,lst2.count('a'))
+def count_matching(lst):
+    count = 0
+    for word in lst:
+        if len(word) >= 2 and word[0] == word[-1]:
+            count += 1
+    return count
+
+sample_list = ['abc', 'xyz', 'aba', '1221']
+result = count_matching(sample_list)
+print("Result:", result)
