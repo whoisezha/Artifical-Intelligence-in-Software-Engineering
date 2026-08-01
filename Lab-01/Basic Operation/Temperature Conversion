@@ -1,0 +1,5 @@
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+Celsius = float(input("Enter Temp In Celsius : "))
+fahrenheit = (Celsius*9/5)+32
+print("Temp in Celsius :" , fahrenheit)
